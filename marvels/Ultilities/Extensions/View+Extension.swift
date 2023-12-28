@@ -8,8 +8,7 @@
 import SwiftUI
 import UIKit
 
-
-//extension for SwiftUI View
+// extension for SwiftUI View
 extension View {
     func loadingOverlay(isLoading: Bool, text: String = "Loading...") -> some View {
         ZStack {
@@ -25,8 +24,7 @@ extension View {
     }
 }
 
-
-//extension for UIkit UIView
+// extension for UIkit UIView
 extension UIView {
     func startShimmering() {
         backgroundColor = .systemGray2

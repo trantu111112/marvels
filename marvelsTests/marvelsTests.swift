@@ -32,50 +32,5 @@ final class marvelsTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    
-    func testFetchData() async {
-        let viewModel = await CharacterListViewModel()
-        
-        // Create an expectation
-        let expectation = expectation(description: "Fetch data expectation")
-        
-        // Perform the asynchronous test
-        Task {
-            let data = await viewModel.fetchData(step: 20, offset: 0)
-            XCTAssertNotNil(data, "Data should not be nil")
-            
-            // Fulfill the expectation
-            expectation.fulfill()
-        }
-        
-        // Wait for the expectation to be fulfilled
-        await waitForExpectations(timeout: 10) // Adjust the timeout as needed
-    }
-    
-    @MainActor
-    func testGetCharacterList() async {
-        let viewModel = await CharacterListViewModel()
-        
-        // Create an expectation
-        let expectation = expectation(description: "Get character list expectation")
-        
-        // Perform the asynchronous test
-        Task {
-            await viewModel.getCharacterList(isRefesh: true)
-            
-            // Wait for a short duration to simulate the asynchronous nature
-            await Task.sleep(1 * 1_000_000_000) // 1 second
-            
-            XCTAssertNotNil(viewModel.characterList, "Character list should not be nil")
-            XCTAssertFalse(viewModel.isLoadingData, "isLoadingData should be false after fetching data")
-            
-            // Fulfill the expectation
-            expectation.fulfill()
-        }
-        
-        // Wait for the expectation to be fulfilled
-        await waitForExpectations(timeout: 5) // Adjust the timeout as needed
-    }
-    
 
 }

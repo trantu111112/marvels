@@ -8,7 +8,6 @@
 import SwiftUI
 
 // MarvelCharacterGrid.swift
-import SwiftUI
 
 struct MarvelCharacterGrid: View {
     @Binding var characters: [MarvelCharacter]?
@@ -16,7 +15,7 @@ struct MarvelCharacterGrid: View {
 
     let columns = [
         GridItem(.fixed(ScreenConstants.cardWidth)),
-        GridItem(.fixed(ScreenConstants.cardWidth)),
+        GridItem(.fixed(ScreenConstants.cardWidth))
     ]
 
     var body: some View {

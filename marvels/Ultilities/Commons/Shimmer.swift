@@ -15,8 +15,7 @@ extension View {
     }
 }
 
-
-fileprivate struct ShimmerEffectHelper: ViewModifier {
+private struct ShimmerEffectHelper: ViewModifier {
     var config: ShimmerConfig
     @State private var moveTo: CGFloat = -1
     func body(content: Content) -> some View {
@@ -60,9 +59,8 @@ struct ShimmerConfig {
     var blur: CGFloat = 0
     var highlightOpacity: CGFloat = 1
     var speed: CGFloat = 1
-    
-}
 
+}
 
 #Preview {
     Rectangle()

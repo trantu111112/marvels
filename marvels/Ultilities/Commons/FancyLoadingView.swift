@@ -13,16 +13,16 @@ struct FancyLoadingView: View {
         case small
         case big
     }
-    
+
     struct Config {
         let circleWidth: CGFloat
         let circleHeight: CGFloat
         let textSize: CGFloat
     }
-    
+
     @State private var rotation: Double = 0
     private let config: Config
-    
+
     init(mode: Mode = .small) {
         switch mode {
         case .small:
@@ -31,7 +31,7 @@ struct FancyLoadingView: View {
             config = Config(circleWidth: 50, circleHeight: 50, textSize: 40)
         }
     }
-    
+
     var body: some View {
         VStack {
             Circle()
@@ -44,7 +44,7 @@ struct FancyLoadingView: View {
                         rotation = 360
                     }
                 }
-            
+
             Text("Loading...")
                 .font(.system(size: config.textSize)) // Use system font and adjust the size
                 .foregroundColor(.cyan) // Change the text color to your preference

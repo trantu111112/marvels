@@ -24,11 +24,11 @@ class EndpointBase {
     var offset: Int = 0
     var path: [String] = []
     var queryItems: [URLQueryItem] = []
-    
+
     init() {
         baseSetup()
     }
-    
+
     private func baseSetup() {
         let now = String(describing: Date.timeIntervalBetween1970AndReferenceDate)
         let md5 = (now + privateKey + publicKey).md5Hash()
@@ -40,12 +40,12 @@ class EndpointBase {
             "offset": "\(offset)"
         ].map({URLQueryItem(name: $0.key, value: $0.value)})
     }
-    
+
     func method(_ method: HTTPMethod) -> Self {
         self.method = method
         return self
     }
-    
+
     func limit(_ limit: Int) -> Self {
         self.limit = limit
         if let index = self.queryItems.firstIndex(where: { item in item.name == "limit" }) {
@@ -53,7 +53,7 @@ class EndpointBase {
         }
         return self
     }
-    
+
     func offset(_ offset: Int) -> Self {
         self.offset = offset
         if let index = self.queryItems.firstIndex(where: { item in item.name == "offset" }) {
@@ -79,5 +79,5 @@ class EndpointBase {
         components.queryItems = queryItems.isEmpty ? nil : queryItems
         return components.string!
     }
-    
+
 }

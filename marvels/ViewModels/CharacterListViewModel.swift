@@ -15,11 +15,11 @@ class CharacterListViewModel: ObservableObject {
     @Published var characterList: [MarvelCharacter]?
     @Published var isLoadingData: Bool = false
     @Published var isLoadingMore: Bool = false
-    
+
     init() {
         getCharacterList(isRefesh: true)
     }
-      
+
     func fetchData(step: Int, offset: Int ) async -> MarvelResponse? {
         var data: MarvelResponse?
         let endpoint = Characters()
@@ -50,7 +50,7 @@ class CharacterListViewModel: ObservableObject {
             updateData(data, isRefresh: isRefesh)
         }
     }
-    
+
     func updateData(_ data: MarvelResponse?, isRefresh: Bool) {
         guard let dataTemp = data else {return}
         characterQueryData = dataTemp
@@ -59,9 +59,8 @@ class CharacterListViewModel: ObservableObject {
             return
         }
         characterList?.append(contentsOf: dataTemp.data?.results?.unwrapped() ?? [])
-        
     }
-    
+
     func updateDisplayedList(_ character: MarvelCharacter, isDisplayed: Bool) {
         if isDisplayed {
             displayedList?.append(character)
@@ -70,9 +69,10 @@ class CharacterListViewModel: ObservableObject {
                 displayedCharacter.id == character.id
             })
         }
-        
-        if (displayedList?.last?.id == characterList?.last?.id && !isLoadingMore) {
+
+        if displayedList?.last?.id == characterList?.last?.id && !isLoadingMore {
             getCharacterList(isRefesh: false)
         }
     }
+
 }

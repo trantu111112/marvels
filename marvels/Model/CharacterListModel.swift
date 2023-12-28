@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct MarvelResponse: Codable {
     let code: Int?
     let status: String?
@@ -43,7 +42,7 @@ struct MarvelCharacter: Codable {
 struct MarvelThumbnail: Codable {
     var path: String?
     var `extension`: String?
-    
+
     mutating func getFullPath() -> String {
         return path.unwrapped() + `extension`.unwrapped()
     }
@@ -64,17 +63,17 @@ struct MarvelItem: Codable {
 struct MarvelURL: Codable {
     let type: String?
     let url: String?
-    
+
     mutating func getFullPath() -> String {
         return url.unwrapped() + type.unwrapped()
     }
 }
 
-//extension Optional where Wrapped == String {
+// extension Optional where Wrapped == String {
 //    var safelyUnwrapped: String {
 //        return self ?? ""
 //    }
-//}
+// }
 
 extension Optional where Wrapped == MarvelThumbnail {
     var safelyUnwrapped: MarvelThumbnail {

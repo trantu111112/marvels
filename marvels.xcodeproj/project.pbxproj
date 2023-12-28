@@ -13,7 +13,6 @@
 		4FAC04062B391D63005DEACF /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAC04052B391D63005DEACF /* CharacterDetailViewModel.swift */; };
 		4FAC04082B39674D005DEACF /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAC04072B39674D005DEACF /* Image+Extensions.swift */; };
 		4FB27CAB2B3C238C003E369F /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB27CAA2B3C238C003E369F /* PullToRefresh.swift */; };
-		4FB27CAD2B3C46B6003E369F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB27CAC2B3C46B6003E369F /* APIClient.swift */; };
 		4FB27CB72B3C5A33003E369F /* EndpointBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB27CB62B3C5A33003E369F /* EndpointBase.swift */; };
 		4FB27CB92B3C5F42003E369F /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB27CB82B3C5F42003E369F /* Configs.swift */; };
 		4FB27CBC2B3C6603003E369F /* Comics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB27CBB2B3C6603003E369F /* Comics.swift */; };
@@ -27,6 +26,7 @@
 		4FB7D5192B3691FF000782AE /* marvelsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB7D5182B3691FF000782AE /* marvelsUITestsLaunchTests.swift */; };
 		4FB7D52A2B370997000782AE /* MarvelCharacterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB7D5292B370997000782AE /* MarvelCharacterList.swift */; };
 		4FCB8EE42B3D08EC001749ED /* MarvelCharacterGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB8EE32B3D08EC001749ED /* MarvelCharacterGrid.swift */; };
+		4FCB8EEA2B3DC46A001749ED /* CharacetersModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB8EE92B3DC469001749ED /* CharacetersModelTests.swift */; };
 		4FDD15F42B37DE43006E5A93 /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDD15F32B37DE43006E5A93 /* CharacterListViewModel.swift */; };
 		4FDD15F72B37E060006E5A93 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDD15F62B37E060006E5A93 /* APIService.swift */; };
 		4FDD15FB2B37EE8B006E5A93 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDD15FA2B37EE8B006E5A93 /* String+Extensions.swift */; };
@@ -62,7 +62,6 @@
 		4FAC04052B391D63005DEACF /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
 		4FAC04072B39674D005DEACF /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 		4FB27CAA2B3C238C003E369F /* PullToRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
-		4FB27CAC2B3C46B6003E369F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		4FB27CB02B3C54F8003E369F /* Config_dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config_dev.xcconfig; sourceTree = "<group>"; };
 		4FB27CB62B3C5A33003E369F /* EndpointBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointBase.swift; sourceTree = "<group>"; };
 		4FB27CB82B3C5F42003E369F /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
@@ -81,6 +80,7 @@
 		4FB7D5182B3691FF000782AE /* marvelsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvelsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4FB7D5292B370997000782AE /* MarvelCharacterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharacterList.swift; sourceTree = "<group>"; };
 		4FCB8EE32B3D08EC001749ED /* MarvelCharacterGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharacterGrid.swift; sourceTree = "<group>"; };
+		4FCB8EE92B3DC469001749ED /* CharacetersModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacetersModelTests.swift; sourceTree = "<group>"; };
 		4FDD15F32B37DE43006E5A93 /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
 		4FDD15F62B37E060006E5A93 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		4FDD15FA2B37EE8B006E5A93 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
@@ -195,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				4FB7D50C2B3691FF000782AE /* marvelsTests.swift */,
+				4FCB8EE92B3DC469001749ED /* CharacetersModelTests.swift */,
 			);
 			path = marvelsTests;
 			sourceTree = "<group>";
@@ -247,7 +248,6 @@
 			isa = PBXGroup;
 			children = (
 				4FDD15F62B37E060006E5A93 /* APIService.swift */,
-				4FB27CAC2B3C46B6003E369F /* APIClient.swift */,
 				4FB27CB82B3C5F42003E369F /* Configs.swift */,
 				4FB27CB62B3C5A33003E369F /* EndpointBase.swift */,
 				4FB27CBA2B3C65A9003E369F /* APIs */,
@@ -292,6 +292,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FB7D51C2B3691FF000782AE /* Build configuration list for PBXNativeTarget "marvels" */;
 			buildPhases = (
+				4F23D6692B3DC7E500D1D961 /* SwiftLint */,
 				4FB7D4EE2B3691FE000782AE /* Sources */,
 				4FB7D4EF2B3691FE000782AE /* Frameworks */,
 				4FB7D4F02B3691FE000782AE /* Resources */,
@@ -411,6 +412,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4F23D6692B3DC7E500D1D961 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4FB7D4EE2B3691FE000782AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -423,7 +445,6 @@
 				4FDD16062B387E60006E5A93 /* MarvelCharacterDetailWrapper.swift in Sources */,
 				4FE407C72B3A7C5600F4C98F /* Shimmer.swift in Sources */,
 				4FB7D52A2B370997000782AE /* MarvelCharacterList.swift in Sources */,
-				4FB27CAD2B3C46B6003E369F /* APIClient.swift in Sources */,
 				4FB27CB92B3C5F42003E369F /* Configs.swift in Sources */,
 				4FB7D4F82B3691FE000782AE /* SceneDelegate.swift in Sources */,
 				4FB27CB72B3C5A33003E369F /* EndpointBase.swift in Sources */,
@@ -447,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FB7D50D2B3691FF000782AE /* marvelsTests.swift in Sources */,
+				4FCB8EEA2B3DC46A001749ED /* CharacetersModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,7 +546,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -655,7 +677,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -718,7 +740,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

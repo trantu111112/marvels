@@ -10,7 +10,7 @@ import SwiftUI
 struct MarvelCharacterList: View {
     @StateObject var marvelModel = CharacterListViewModel()
     @State var isHiddenNav = false
-    
+
     var body: some View {
         NavigationView {
             ScrollView {
@@ -25,7 +25,7 @@ struct MarvelCharacterList: View {
             }
             .coordinateSpace(name: "pullToRefresh")
         }
-        
+
         .navigationTitle("Marvel Heroes")
         .navigationBarHidden(isHiddenNav)
         .onAppear(perform: {
@@ -39,4 +39,3 @@ struct MarvelCharacterList: View {
 #Preview {
     MarvelCharacterList()
 }
-

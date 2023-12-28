@@ -18,7 +18,7 @@ extension UIImageView {
         }
 
         self.image = placeholder
-        URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+        URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
             guard let data = data, error == nil else {
                 print("Error loading image from URL: \(url), error: \(error?.localizedDescription ?? "Unknown error")")
                 return

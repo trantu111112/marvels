@@ -9,11 +9,10 @@ import Foundation
 
 @MainActor
 class CharacterDetailViewModel<U: Codable> {
-    
+
     var characterId: Int?
     private(set) var data: U?
-    
-    
+
     func fetchData() async {
         guard let characterId = self.characterId else {return}
         let endpoint = Characters()
@@ -28,9 +27,9 @@ class CharacterDetailViewModel<U: Codable> {
             print("Error fetching data: \(error)")
         }
     }
-    
+
     func caseTypeData<T>() -> T? {
         return data as? T
     }
-    
+
 }

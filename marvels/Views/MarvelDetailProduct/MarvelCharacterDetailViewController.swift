@@ -9,7 +9,7 @@ import UIKit
 
 class MarvelCharacterDetailViewController<T: Codable>: UIViewController {
     typealias T = MarvelResponse
-    
+
     @IBOutlet weak var thumbnail: UIImageView!
     @IBOutlet weak var comicsStack: UIStackView!
     @IBOutlet weak var seriesStack: UIStackView!
@@ -17,22 +17,22 @@ class MarvelCharacterDetailViewController<T: Codable>: UIViewController {
     @IBOutlet weak var comicsTitle: UILabel!
     @IBOutlet weak var seriesTitle: UILabel!
     @IBOutlet weak var storiesTitle: UILabel!
-    
+
     var characterDetailModel: CharacterDetailViewModel<T>?
-    
+
     init() {
         super.init(nibName: "MarvelDetailProductViewController", bundle: nil)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
     }
-    
+
     func setupView() {
         Task {
             startShriming()
@@ -45,7 +45,7 @@ class MarvelCharacterDetailViewController<T: Codable>: UIViewController {
             setUpDetailList(data: model)
         }
     }
-    
+
     func startShriming() {
         thumbnail.startShimmering()
         comicsStack.startShimmering()
@@ -55,7 +55,7 @@ class MarvelCharacterDetailViewController<T: Codable>: UIViewController {
         seriesTitle.startShimmering()
         storiesTitle.startShimmering()
     }
-    
+
     func stopShriming() {
         thumbnail.stopShimmering()
         comicsStack.stopShimmering()
@@ -68,14 +68,14 @@ class MarvelCharacterDetailViewController<T: Codable>: UIViewController {
         storiesTitle.text = "Stories"
         seriesTitle.text = "Series"
     }
-    
+
     func setUpDetailList(data: MarvelResponse?) {
         guard let model = data?.data?.results?.first else { return }
         addLabelsToStack(items: model.comics?.items, stack: comicsStack)
         addLabelsToStack(items: model.series?.items, stack: seriesStack)
         addLabelsToStack(items: model.stories?.items, stack: storiesStack)
     }
-    
+
     func addLabelsToStack(items: [MarvelItem]?, stack: UIStackView) {
         items?.forEach { item in
             let label = UILabel()

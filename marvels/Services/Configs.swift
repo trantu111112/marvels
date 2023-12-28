@@ -14,7 +14,6 @@ enum Configs {
         }
         return dict
     }()
-    
     static let BASE_URL: String = {
         guard let baseString = Configs.dict["BASE_URL"] as? String else {
             fatalError("Base url is not found")
@@ -22,14 +21,12 @@ enum Configs {
         let base_url = baseString.replacingOccurrences(of: "\\", with: "")
         return base_url
     }()
-    
     static let PUBLIC_KEY: String = {
         guard let publicKey = Configs.dict["PUBLIC_KEY"] as? String else {
             fatalError("Base url is not found")
         }
         return publicKey
     }()
-    
     static let PRIVATE_KEY: String = {
         guard let privateKey = Configs.dict["PRIVATE_KEY"] as? String else {
             fatalError("Base url is not found")

@@ -11,9 +11,9 @@ import SwiftUI
 
 struct MarvelCharacterDetailWrapper: UIViewControllerRepresentable {
     typealias UIViewControllerType = UIViewController
-    
+
     var characterId: Int?
-    
+
     func makeUIViewController(context: UIViewControllerRepresentableContext<MarvelCharacterDetailWrapper>) -> UIViewController {
         let viewController = MarvelCharacterDetailViewController<MarvelResponse>()
         let viewmodel = CharacterDetailViewModel<MarvelResponse>()
@@ -23,8 +23,8 @@ struct MarvelCharacterDetailWrapper: UIViewControllerRepresentable {
 
         return viewController
     }
-    
+
     func updateUIViewController(_ uiViewController: UIViewController, context: UIViewControllerRepresentableContext<MarvelCharacterDetailWrapper>) {
     }
-    
+
 }
