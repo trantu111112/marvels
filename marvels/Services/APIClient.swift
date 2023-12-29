@@ -9,11 +9,11 @@ final class APIClient: APIClientProtocol {
     // MARK: - Properties
     static let shared: APIClientProtocol = APIClient()
     var session: URLSession
-    
+
     init(session: URLSession = URLSession.shared) {
         self.session = session
     }
-    
+
     func fetchDataNew<T: Codable>(endpoint: String) async throws -> T {
         guard let url = URL(string: endpoint) else {
             throw URLError(.badURL)

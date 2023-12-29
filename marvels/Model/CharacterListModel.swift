@@ -69,7 +69,6 @@ struct MarvelURL: Codable {
     }
 }
 
-
 extension Optional where Wrapped == MarvelThumbnail {
     var safelyUnwrapped: MarvelThumbnail {
         return self ?? MarvelThumbnail(path: nil, extension: nil)

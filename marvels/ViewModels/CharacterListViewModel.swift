@@ -55,7 +55,7 @@ class CharacterListViewModel: ObservableObject {
             updateData(data, isRefresh: isRefesh)
         }
     }
-    
+
     func amountToLoad() -> Int {
         guard let total = characterQueryData?.data?.total else { return 0}
         guard let currentTotal = characterList?.count else { return 0}
