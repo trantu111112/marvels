@@ -16,6 +16,7 @@ class CharacterListViewModel: ObservableObject {
     var characterQueryData: MarvelResponse?
     var displayedList: [MarvelCharacter]? = []
     var apiClient: APIClientProtocol
+    static var AMOUNT_TO_LOAD = 20
 
     init(_ apiClient: APIClientProtocol = APIClient.shared) {
         self.apiClient = apiClient
@@ -42,15 +43,27 @@ class CharacterListViewModel: ObservableObject {
             var data: MarvelResponse?
             if !isRefesh {
                 isLoadingMore = true
-                data = await fetchData(step: 20, offset: characterList?.count ?? 0)
+                let amountToLoad = amountToLoad()
+                guard amountToLoad > 0 else {return}
+                data = await fetchData(step: CharacterListViewModel.AMOUNT_TO_LOAD, offset: characterList?.count ?? 0)
                 isLoadingMore = false
             } else {
                 isLoadingData = true
-                data = await fetchData(step: 20, offset: 0)
+                data = await fetchData(step: CharacterListViewModel.AMOUNT_TO_LOAD, offset: 0)
                 isLoadingData = false
             }
             updateData(data, isRefresh: isRefesh)
         }
+    }
+    
+    func amountToLoad() -> Int {
+        guard let total = characterQueryData?.data?.total else { return 0}
+        guard let currentTotal = characterList?.count else { return 0}
+        if currentTotal >= total { return 0}
+        if currentTotal + CharacterListViewModel.AMOUNT_TO_LOAD > total {
+            return total - currentTotal
+        }
+        return CharacterListViewModel.AMOUNT_TO_LOAD
     }
 
     func updateData(_ data: MarvelResponse?, isRefresh: Bool) {
