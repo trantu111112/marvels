@@ -10,7 +10,7 @@ excluded: # case-sensitive paths to ignore during linting. Takes precedence over
 
 
 type_name:
-  min_length: 4 # only warning
+  min_length: 1 # only warning
   max_length: # warning and error
     warning: 40
     error: 50
@@ -23,3 +23,6 @@ force_try:
 
 identifier_name:
   allowed_symbols: "_"
+
+line_length:
+  warning: 180

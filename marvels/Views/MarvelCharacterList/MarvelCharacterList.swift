@@ -17,7 +17,7 @@ struct MarvelCharacterList: View {
                 PullToRefresh(coordinateSpaceName: "pullToRefresh") {
                     marvelModel.getCharacterList(isRefesh: true)
                 }
-                if let results = marvelModel.characterList {
+                if marvelModel.characterList != nil {
                     MarvelCharacterGrid(characters: $marvelModel.characterList) { character, isDisplayed  in
                         marvelModel.updateDisplayedList(character, isDisplayed: isDisplayed)
                     }
