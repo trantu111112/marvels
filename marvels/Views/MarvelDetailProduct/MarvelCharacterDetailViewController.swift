@@ -80,6 +80,7 @@ class MarvelCharacterDetailViewController<T: Codable>: UIViewController {
         items?.forEach { item in
             let label = UILabel()
             label.heightAnchor.constraint(equalToConstant: 42).isActive = true
+            label.textAlignment = .center
             label.numberOfLines = 3
             label.text = item.name
             stack.addArrangedSubview(label)

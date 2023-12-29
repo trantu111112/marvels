@@ -10,13 +10,15 @@ import CryptoKit
 
 @MainActor
 class CharacterListViewModel: ObservableObject {
-    var characterQueryData: MarvelResponse?
-    var displayedList: [MarvelCharacter]? = []
     @Published var characterList: [MarvelCharacter]?
     @Published var isLoadingData: Bool = false
     @Published var isLoadingMore: Bool = false
+    var characterQueryData: MarvelResponse?
+    var displayedList: [MarvelCharacter]? = []
+    var apiClient: APIClientProtocol
 
-    init() {
+    init(_ apiClient: APIClientProtocol = APIClient.shared) {
+        self.apiClient = apiClient
         getCharacterList(isRefesh: true)
     }
 
@@ -27,7 +29,7 @@ class CharacterListViewModel: ObservableObject {
             .offset(offset)
             .build()
         do {
-            let response: MarvelResponse = try await APIClient.shared.fetchDataNew(endpoint: endpoint)
+            let response: MarvelResponse = try await apiClient.fetchDataNew(endpoint: endpoint)
             data = response
         } catch {
             print("Error fetching data: \(error)")

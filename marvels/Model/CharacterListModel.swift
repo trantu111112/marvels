@@ -69,11 +69,6 @@ struct MarvelURL: Codable {
     }
 }
 
-// extension Optional where Wrapped == String {
-//    var safelyUnwrapped: String {
-//        return self ?? ""
-//    }
-// }
 
 extension Optional where Wrapped == MarvelThumbnail {
     var safelyUnwrapped: MarvelThumbnail {
@@ -98,5 +93,3 @@ extension Optional where Wrapped == MarvelURL {
         return self ?? MarvelURL(type: nil, url: nil)
     }
 }
-
-// Apply similar extensions to other structs as needed

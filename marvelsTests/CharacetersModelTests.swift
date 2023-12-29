@@ -31,4 +31,12 @@ final class CharacetersModelTests: XCTestCase {
         try await Task.sleep(nanoseconds: 5 * 1_000_000_000)
         XCTAssertEqual(model.characterList?.count, 20, "The data list should be 20 characters")
     }
+    
+    @MainActor func testLoadingMore() async throws {
+        let model = CharacterListViewModel()
+        try await Task.sleep(nanoseconds: 3 * 1_000_000_000)
+        model.getCharacterList(isRefesh: false)
+        try await Task.sleep(nanoseconds: 3 * 1_000_000_000)
+        XCTAssertEqual(model.characterList?.count, 40, "The data list should be 40 characters")
+    }
 }
