@@ -50,7 +50,9 @@ struct MarvelCharacterGrid: View {
                 .tag(item.id)
                 .navigationBarHidden(true)
                 .navigationBarBackButtonHidden()
+                .accessibilityIdentifier("\(String(describing: item.id))")
             }
         }
+        .accessibilityIdentifier("MarvelCharacterGridView")
     }
 }

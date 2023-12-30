@@ -23,6 +23,7 @@ struct MarvelCharacterList: View {
                     }
                 }
             }
+            .accessibilityIdentifier("MarvelCharacterScrollView")
             .coordinateSpace(name: "pullToRefresh")
         }
 
@@ -33,6 +34,7 @@ struct MarvelCharacterList: View {
         })
         .loadingOverlay(isLoading: marvelModel.isLoadingData)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        .accessibilityIdentifier("MarvelCharacterNavigationViewId")
     }
 }
 

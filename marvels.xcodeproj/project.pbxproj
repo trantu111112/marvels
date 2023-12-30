@@ -15,6 +15,7 @@
 		4F7AE1202B3E8541002DF2D0 /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7AE11F2B3E8541002DF2D0 /* MockAPIClient.swift */; };
 		4F7AE1242B3EB4E1002DF2D0 /* CharacterMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F7AE1212B3E87F5002DF2D0 /* CharacterMock.json */; };
 		4F7AE1252B3EB503002DF2D0 /* CharacterMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F7AE1212B3E87F5002DF2D0 /* CharacterMock.json */; };
+		4FA80C942B3EF1070000A3EB /* MarvelCharacterListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA80C932B3EF1070000A3EB /* MarvelCharacterListUITests.swift */; };
 		4FAC04062B391D63005DEACF /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAC04052B391D63005DEACF /* CharacterDetailViewModel.swift */; };
 		4FAC04082B39674D005DEACF /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAC04072B39674D005DEACF /* Image+Extensions.swift */; };
 		4FB27CAB2B3C238C003E369F /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB27CAA2B3C238C003E369F /* PullToRefresh.swift */; };
@@ -68,6 +69,7 @@
 		4F7AE11D2B3E7E66002DF2D0 /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
 		4F7AE11F2B3E8541002DF2D0 /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 		4F7AE1212B3E87F5002DF2D0 /* CharacterMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CharacterMock.json; sourceTree = "<group>"; };
+		4FA80C932B3EF1070000A3EB /* MarvelCharacterListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharacterListUITests.swift; sourceTree = "<group>"; };
 		4FAC04052B391D63005DEACF /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
 		4FAC04072B39674D005DEACF /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 		4FB27CAA2B3C238C003E369F /* PullToRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
@@ -140,6 +142,9 @@
 		4F7AE1222B3E8972002DF2D0 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				4F7AE11F2B3E8541002DF2D0 /* MockAPIClient.swift */,
+				4F7AE11D2B3E7E66002DF2D0 /* Mockable.swift */,
+				4F7AE1212B3E87F5002DF2D0 /* CharacterMock.json */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -213,9 +218,6 @@
 				4FB7D50C2B3691FF000782AE /* marvelsTests.swift */,
 				4FCB8EE92B3DC469001749ED /* CharacetersModelTests.swift */,
 				4F7AE0E32B3E5A8B002DF2D0 /* APClientTests.swift */,
-				4F7AE11F2B3E8541002DF2D0 /* MockAPIClient.swift */,
-				4F7AE1212B3E87F5002DF2D0 /* CharacterMock.json */,
-				4F7AE11D2B3E7E66002DF2D0 /* Mockable.swift */,
 				4F7AE1222B3E8972002DF2D0 /* Mocks */,
 			);
 			path = marvelsTests;
@@ -226,6 +228,7 @@
 			children = (
 				4FB7D5162B3691FF000782AE /* marvelsUITests.swift */,
 				4FB7D5182B3691FF000782AE /* marvelsUITestsLaunchTests.swift */,
+				4FA80C932B3EF1070000A3EB /* MarvelCharacterListUITests.swift */,
 			);
 			path = marvelsUITests;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 			files = (
 				4FB7D5172B3691FF000782AE /* marvelsUITests.swift in Sources */,
 				4FB7D5192B3691FF000782AE /* marvelsUITestsLaunchTests.swift in Sources */,
+				4FA80C942B3EF1070000A3EB /* MarvelCharacterListUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +656,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8MGKFVX3JH;
@@ -659,6 +664,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.marvels.marvelsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
