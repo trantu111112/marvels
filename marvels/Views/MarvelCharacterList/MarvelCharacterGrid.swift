@@ -11,6 +11,7 @@ import SwiftUI
 
 struct MarvelCharacterGrid: View {
     @Binding var characters: [MarvelCharacter]?
+    @Binding var isHiddenNav: Bool
     var onCharacterSelected: (MarvelCharacter, Bool) -> Void
 
     let columns = [
@@ -24,6 +25,9 @@ struct MarvelCharacterGrid: View {
                 NavigationLink(
                     destination: MarvelCharacterDetailWrapper(characterId: item.id)
                         .navigationBarTitle(item.name.unwrapped())
+                        .onAppear(perform: {
+                            isHiddenNav = true
+                        })
                 ) {
                     VStack {
                         AsyncImage(url: URL(string: item.thumbnail.safelyUnwrapped.path.unwrapped() + "." + item.thumbnail.safelyUnwrapped.extension.unwrapped())) { phase in

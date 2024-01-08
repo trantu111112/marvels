@@ -20,7 +20,7 @@ class MarvelCharacterGridUITests: XCTestCase {
         print(XCUIApplication().debugDescription)
         
         XCTAssertTrue(navigatonView.exists, "characterNavigation view does not exist")
-        XCTAssertTrue(gridview.exists, "characterNavigation view does not exist")
+        XCTAssertTrue(gridview.exists, "characterGrid view does not exist")
         XCTAssertTrue(characterScroll.exists, "characterScroll view does not exist")
     }
 

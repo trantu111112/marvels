@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MarvelCharacterList: View {
     @StateObject var marvelModel = CharacterListViewModel()
-    @State var isHiddenNav = false
+    @State var isHiddenNav: Bool = false
 
     var body: some View {
         NavigationView {
@@ -18,7 +18,7 @@ struct MarvelCharacterList: View {
                     marvelModel.getCharacterList(isRefesh: true)
                 }
                 if marvelModel.characterList != nil {
-                    MarvelCharacterGrid(characters: $marvelModel.characterList) { character, isDisplayed  in
+                    MarvelCharacterGrid(characters: $marvelModel.characterList, isHiddenNav: self.$isHiddenNav) { character, isDisplayed  in
                         marvelModel.updateDisplayedList(character, isDisplayed: isDisplayed)
                     }
                 }
