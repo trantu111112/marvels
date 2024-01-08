@@ -28,6 +28,9 @@ struct MarvelCharacterGrid: View {
                         .onAppear(perform: {
                             isHiddenNav = true
                         })
+                        .onDisappear(perform: {
+                            isHiddenNav = false
+                        })
                 ) {
                     VStack {
                         AsyncImage(url: URL(string: item.thumbnail.safelyUnwrapped.path.unwrapped() + "." + item.thumbnail.safelyUnwrapped.extension.unwrapped())) { phase in
