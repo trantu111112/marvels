@@ -37,7 +37,3 @@ struct MarvelCharacterList: View {
         .accessibilityIdentifier("MarvelCharacterNavigationViewId")
     }
 }
-
-#Preview {
-    MarvelCharacterList()
-}

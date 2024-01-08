@@ -61,8 +61,3 @@ struct ShimmerConfig {
     var speed: CGFloat = 1
 
 }
-
-#Preview {
-    Rectangle()
-        .shimmer(.init(tint: .gray.opacity(0.3), highlight: .white, blur: 5))
-}
